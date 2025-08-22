@@ -4,42 +4,32 @@ import { motion, AnimatePresence } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    name: "Alex, 13",
-    text: "Alex began our private classes with a keen interest in studying math, despite struggling with his school-level understanding of the subject. Over the course of the year, not only has his enthusiasm for math grown, but he has also started delving into various other facets of the subject through our guidance",
+    name: "Marta, 14",
+    role: "Game Dev Track",
+    text: "Було дуже захопливо! Зробила свою першу гру за тиждень і не могла зупинитися.",
+    avatar: "/images/ava-1.jpg"
   },
   {
     id: 2,
-    name: "Innokentiy, 17",
-    text: "Innokentiy switched to private tutoring and began to grow rapidly in Codeforce  — a competitive coding community. He is now one of the top competitive programmers in Spain and in the process of getting into the top world universities.",
+    name: "Oleh, 16",
+    role: "AI & ML Track",
+    text: "Ментори — вогонь. Реальні проєкти й корисний фідбек. Додав до портфоліо.",
+    avatar: "/images/ava-2.jpg"
   },
   {
     id: 3,
-    name: "Lily, 12",
-    text: "Lily started her journey with Leagues of Code Summer Camp. She later on switched to group classes then eventually 1-on-1 classes. And with the help of our teachers, she’s grown fast and is making her own games on the web!",
+    name: "Anna, 12",
+    role: "Robotics Track",
+    text: "Нарешті зрозуміла електроніку. Дуже сподобались командні челенджі!",
+    avatar: "/images/ava-3.jpg"
   },
   {
     id: 4,
-    name: "Anna - Parent",
-    text: "I’m very happy that my daughter who studies Python at your academy. She liked it and decided to enter a programming class at her school next year. She finds it useful, interesting and it can help her to find a job in Norway in the future; this is her dream. She also liked the teacher Nikolai.",
-  },
-
-  {
-    id: 5,
-    name: "Susana - Teacher & Parent",
-    text: "As a Math and IT teacher I'm often disappointed with the standard school curriculum, but I was very positively surprised to finally find an excellent program. Great teachers and excellent challenging materials will definitely motivate students. Thank you for the great job you're doing. I will surely recommend it to my students.",
-  },
-
-  {
-    id: 6,
-    name: "Zoya - Parent",
-    text: "Our son was very excited to learn so many interesting things. I noticed that as the youngest, he was encouraged to speak up and express his opinion and I highly appreciate it. I like the platform for the daily assignments and that he received instant feedback. Henri’s professor has a high professional level and the ability to create a positive and inspiring atmosphere.",
-  },
-  {
-    id: 7,
-    name: "Irma - Parent",
-    text: "It's good that Leagues of Code appeared exactly when my son was interested in programming. Here he found his mentor to communicate with. He has also made new friends. Leagues of Code gives children an opportunity to learn from the best, and also learn from each other. Working in a team. To compete. To win. As a parent, it's amazing how programming can be better than Minecraft or Fortnite",
-  },
-  
+    name: "Daniel, 15",
+    role: "Full-Stack Track",
+    text: "З нуля до працюючого сайту. Крута структура і підтримка після курсу.",
+    avatar: "/images/ava-4.jpg"
+  }
 ];
 
 /** обчислюємо найкоротшу кругову відстань між i та current */
@@ -75,7 +65,8 @@ export default function Testimonials() {
 
       <div className="stage">
         {testimonials.map((t, i) => {
-          const d = deltaIndex(i, index, n); 
+          const d = deltaIndex(i, index, n); // -2..2
+          // позиційні стилі для трьох головних станів
           let x = 0, scale = 1, rotate = 0, z = 3, opacity = 1, pointer = "auto";
           if (d === 0) {
             x = 0; scale = 1; rotate = 0; z = 30; opacity = 1;
@@ -106,7 +97,7 @@ export default function Testimonials() {
               }}
             >
               <header className="card-top">
-                {/* <img className="avatar" src={t.avatar} alt={t.name} /> */}
+                <img className="avatar" src={t.avatar} alt={t.name} />
                 <div>
                   <div className="name">{t.name}</div>
                   <div className="role">{t.role}</div>
