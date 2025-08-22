@@ -180,16 +180,25 @@ import Showcase from './Showcase.jsx'
 import StackedCards from './StackedCards.jsx'
 import Testimonials from './Testimonials.jsx'
 
+import Testimonials from './components/Testimonials';
 export default function App() {
   return (
     <main>
       <Hero />
+<<<<<<< HEAD
       <Showcase />
       <StackedCards />
       <About />
       <Testimonials />
+=======
+      <Testimonials />
+      <Highlights />
+      <Tracks />
+      <Schedule />
+>>>>>>> 5338b65 (furs)
       <CTA />
       <Footer />
+      
     </main>
   )
 }
