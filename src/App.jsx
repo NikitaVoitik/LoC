@@ -7,26 +7,33 @@ function Container({ children }) {
 function Hero() {
   return (
     <section className="hero">
-      <Container>
-        <div className="hero-grid">
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/public/0822.mov" type="video/mp4" />
+        Ваш браузер не підтримує відео.
+      </video>
+
+      <div className="hero-content">
+        <Container>
           <div className="hero-copy">
-            <p className="eyebrow">Summer Camp • Barcelona</p>
             <h1>A tech adventure for aspiring young innovators</h1>
-            <p className="sub">Fully online • July 1–7, 202X • Ages 8–18</p>
             <div className="cta-row">
               <a className="btn btn-primary" href="#enroll">Enroll</a>
               <a className="btn btn-outline" href="#info">Request info</a>
             </div>
-            <p className="badges">ICPC European Champions • Coaches from top universities • 100+ countries</p>
+            
           </div>
-          <div className="hero-media">
-            <div className="media-placeholder" aria-label="Hero image placeholder" />
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </section>
   )
 }
+
 
 function Highlights() {
   const items = [

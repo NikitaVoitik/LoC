@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+
 :root {
   --bg: #ffffff;
   --text: #0f172a;
@@ -13,21 +15,89 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 .container { max-width: 1120px; padding: 0 1rem; margin: 0 auto; }
 
 /* Hero */
-.hero { background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); padding: 4rem 0; }
+/*.hero { background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); padding: 4rem 0; }
+*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;           /* повна висота екрану */
+  overflow: hidden;
+  display: flex;
+  align-items: center;     /* центрує по вертикалі */
+  justify-content: center; /* центрує по горизонталі */
+  text-align: center;
+  color: white;
+}
 .hero-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: center; }
 @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
 .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: var(--muted); margin: 0; }
-.hero h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: .4rem 0 0; }
-.sub { color: var(--muted); margin: 1rem 0 0; font-size: 1.1rem; }
-.cta-row { display: flex; gap: .75rem; margin-top: 1rem; flex-wrap: wrap; }
+/*.hero h1 { 
+font-size: clamp(2rem, 4vw, 3rem); 
+line-height: 1.1; margin: .4rem 0 0; }
+*/
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 6vw, 5rem); /* адаптивний розмір */
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.sub {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+/*.cta-row { display: flex; gap: .75rem; margin-top: 1rem; flex-wrap: wrap; }*/
 .badges { color: var(--muted); margin-top: .75rem; font-size: .9rem; }
-.hero-media .media-placeholder { aspect-ratio: 16/9; width: 100%; border-radius: 16px; background: #f1f5f9; border: 1px solid var(--line); }
+/*.hero-media .media-placeholder { aspect-ratio: 16/9; width: 100%; border-radius: 16px; background: #f1f5f9; border: 1px solid var(--line); }
+*/
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* затемнення для контрасту */
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
 
 /* Buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .75rem 1rem; border-radius: 12px; text-decoration: none; font-weight: 600; border: 1px solid transparent; }
-.btn-primary { background: var(--accent); color: white; }
-.btn-outline { background: white; color: var(--text); border-color: var(--line); }
-.btn:hover { opacity: .9; }
+.btn { 
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 3px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 4px 4px 0px black;
+}
+.btn-primary { 
+  background-color: #0047FF; /* насичений синій */
+  color: white;
+ }
+.btn-outline { 
+  background-color: white;
+  color: black; 
+}
+.btn:hover { 
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px black; }
 
 /* Sections */
 .section { padding: 3.5rem 0; }
@@ -67,6 +137,12 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 @media (min-width: 1024px) { .cta-grid { grid-template-columns: 1fr 1fr; } }
 .form { background: white; color: var(--text); border-radius: 16px; padding: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
 .form label { font-weight: 600; font-size: .9rem; }
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
 .form input { margin-top: .4rem; width: 100%; padding: .7rem .9rem; border-radius: 10px; border: 1px solid var(--line); outline: none; }
 .form button { width: 100%; margin-top: .75rem; }
 .fine { margin: .35rem 0 0; color: var(--muted); font-size: .8rem; }
