@@ -188,11 +188,7 @@ export default function App() {
       <StackedCards />
       <About />
       <Testimonials />
-      <Highlights />
-      <Tracks />
-      <Schedule />
       <CTA />
-      <FAQ />
       <Footer />
     </main>
   )
