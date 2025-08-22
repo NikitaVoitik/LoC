@@ -175,11 +175,19 @@ function Footer() {
     </footer>
   )
 }
+import About from './About.jsx'
+import Showcase from './Showcase.jsx'
+import StackedCards from './StackedCards.jsx'
+import Testimonials from './Testimonials.jsx'
 
 export default function App() {
   return (
     <main>
       <Hero />
+      <Showcase />
+      <StackedCards />
+      <About />
+      <Testimonials />
       <Highlights />
       <Tracks />
       <Schedule />
