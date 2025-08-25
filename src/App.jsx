@@ -31,7 +31,6 @@ function Hero() {
             >
               book a free lesson
             </a>              
-            {/* <a className="btn btn-outline" href="#info">Request info</a> */}
             </div>
             
           </div>

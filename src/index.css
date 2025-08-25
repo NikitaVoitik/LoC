@@ -10,7 +10,17 @@
 
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
-body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; color: var(--text); background: var(--bg); }
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+    color: var(--text);
+    background-color: #f8fafe;
+    background-image:
+            linear-gradient(rgba(244, 244, 244, 1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(244, 244, 244, 1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
 
 .container { max-width: 1120px; padding: 0 1rem; margin: 0 auto; }
 
@@ -31,8 +41,8 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 .hero-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: center; }
 @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
 .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: var(--muted); margin: 0; }
-/*.hero h1 { 
-font-size: clamp(2rem, 4vw, 3rem); 
+/*.hero h1 {
+font-size: clamp(2rem, 4vw, 3rem);
 line-height: 1.1; margin: .4rem 0 0; }
 */
 
@@ -76,7 +86,7 @@ line-height: 1.1; margin: .4rem 0 0; }
 
 /* About */
 .about {
-  min-height: 80vh;
+  min-height: 10svh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +112,7 @@ line-height: 1.1; margin: .4rem 0 0; }
 
 
 /* Buttons */
-.btn { 
+.btn {
   display: inline-block;
   padding: 14px 32px;
   font-size: 16px;
@@ -114,20 +124,20 @@ line-height: 1.1; margin: .4rem 0 0; }
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 4px 4px 0px black;
 }
-.btn-primary { 
+.btn-primary {
   background-color: #0047FF; /* насичений синій */
   color: white;
  }
-.btn-outline { 
+.btn-outline {
   background-color: white;
-  color: black; 
+  color: black;
 }
-.btn:hover { 
+.btn:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px black; }
 
 /* Sections */
-.section { padding: 3.5rem 0; }
+.section { padding: 1rem 0; }
 .section-alt { background: #f8fafc; }
 .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
 .section h2 { margin: 0; font-size: 1.6rem; }
@@ -276,34 +286,35 @@ main { min-height: 100vh; display: flex; flex-direction: column; gap: 0; }
 
 /* Кожна «доріжка» для скролу. Негативний margin створює перекриття */
 .stack-row {
-  height: 120vh;            /* простор для прилипання; 110–140vh ок */
-  position: relative;
-  margin-top: -32vh;        /* ГОЛОВНЕ: наступна доріжка під’їжджає під попередню */
+    height: 100svh;            /* простір для прилипання; 110–140vh ок */
+    position: relative;
+    margin-top: -32vh;        /* ГОЛОВНЕ: наступна доріжка під'їжджає під попередню */
 }
 .stack-row:first-child { margin-top: 0; }
 
 /* Велика картка, що прилипає і перекриває попередню */
 .stack-card {
-  position: sticky;
-  top: clamp(56px, 8vh, 96px);      /* відступ під fixed-хедер */
-  z-index: calc(10 + var(--i));     /* кожна наступна вище */
-  background: var(--card-bg, #fff);
-  border-radius: 32px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 28px 80px rgba(0,0,0,.16);
-  overflow: hidden;
+    position: sticky;
+    top: clamp(56px, 8vh, 96px);      /* відступ під fixed-хедер */
+    z-index: calc(1 + var(--i));     /* ЗМІНЕНО: реверсна формула z-index */
+    background: var(--card-bg, #fff);
+    border-radius: 32px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 28px 80px rgba(0,0,0,.16);
+    overflow: hidden;
 
-  /* ВЕЛИКИЙ РОЗМІР */
-  max-width: min(1280px, 92vw);
-  margin: 0 auto;
-  padding: clamp(1rem, 2vw, 1.75rem);
+    /* ВЕЛИКИЙ РОЗМІР */
+    max-width: min(1280px, 92vw);
+    margin: 0 auto;
+    padding: clamp(1rem, 2vw, 1.75rem);
 
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 1fr;       /* мобілка — одна колонка */
-  will-change: transform;
-  transform-origin: center top;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;       /* мобілка — одна колонка */
+    will-change: transform;
+    transform-origin: center top;
 }
+
 
 /* Десктоп: 2 колонки й висока медіа-зона */
 @media (min-width: 992px) {
