@@ -430,3 +430,82 @@ main { min-height: 100vh; display: flex; flex-direction: column; gap: 0; }
 .dot.is-active { background: #4f46e5; transform: scale(1.2); }
 
 
+.footer.contact-cta {
+  background: #f5f8fc;           /* светлый фон секции */
+  padding: 64px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-kicker {
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  line-height: 1.05;
+  font-size: clamp(28px, 3.5vw, 56px);
+  color: #3d63ff;                /* синий заголовок */
+}
+
+.contact-headline {
+  margin: 0;
+  font-weight: 900;
+  line-height: 1.05;
+  font-size: clamp(28px, 3.2vw, 56px);
+  color: #0b0f1a;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;  /* блок | разделитель | блок */
+  align-items: center;
+  gap: 28px;
+  padding: 28px 36px;
+  background: #fff;
+  border: 1px solid #e6ebf7;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(18, 32, 60, 0.06);
+}
+
+.contact-item .label {
+  display: block;
+  font-size: 15px;
+  color: #9aa3b2;
+  margin-bottom: 6px;
+}
+
+.contact-item .value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0b0f1a;
+  text-decoration: none;
+}
+
+.contact-item .value:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  width: 1px;
+  height: 56px;
+  background: #e9edf6;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .contact-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: left;
+  }
+  .divider {
+    display: none;
+  }
+}

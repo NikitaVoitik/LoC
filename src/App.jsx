@@ -23,8 +23,15 @@ function Hero() {
           <div className="hero-copy">
             <h1>A tech adventure for aspiring young innovators</h1>
             <div className="cta-row">
-              <a className="btn btn-primary" href="#enroll">Enroll</a>
-              <a className="btn btn-outline" href="#info">Request info</a>
+            <a
+              className="btn btn-primary"
+              href="https://harbour-space.typeform.com/to/qaVsoIqp?typeform-source=join.leaguesofcode.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              book a free lesson
+            </a>              
+            {/* <a className="btn btn-outline" href="#info">Request info</a> */}
             </div>
             
           </div>
@@ -124,12 +131,15 @@ function CTA() {
             <h2>Ready to join?</h2>
             <p className="muted">Reserve your spot and receive the full info pack via email.</p>
           </div>
-          <form className="form" onSubmit={(e) => e.preventDefault()}>
-            <label>Email</label>
-            <input placeholder="you@example.com" required />
-            <button type="submit" className="btn btn-primary">Get info pack</button>
-            <p className="fine">By continuing you agree to our Terms & Privacy.</p>
-          </form>
+          <a
+            className="btn btn-primary"
+            href="https://harbour-space.typeform.com/to/qaVsoIqp?typeform-source=join.leaguesofcode.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ placeSelf: 'center' }}   // или justifySelf: 'center'
+          >
+            book a free lesson
+          </a>
         </div>
       </Container>
     </section>
@@ -161,41 +171,46 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer contact-cta">
       <Container>
-        <div className="footer-grid">
-          <p>© {new Date().getFullYear()} Your Company</p>
-          <nav className="nav">
-            <a href="#" className="link">Terms</a>
-            <a href="#" className="link">Privacy</a>
-            <a href="#" className="link">Contact</a>
-          </nav>
+        <div className="contact-grid">
+          <div className="contact-copy">
+            <h2 className="contact-kicker">How can we help?</h2>
+            <h3 className="contact-headline">Contact us anytime</h3>
+          </div>
+
+          <div className="contact-card" role="complementary" aria-label="Contact options">
+            <div className="contact-item">
+              <span className="label">Send us a message</span>
+              <a className="value" href="mailto:hello@leaguesofcode.com">hello@leaguesofcode.com</a>
+            </div>
+
+            <span className="divider" aria-hidden="true"></span>
+
+            <div className="contact-item">
+              <span className="label">Call us</span>
+              <a className="value" href="tel:+34671498303">+34 671 498 303</a>
+            </div>
+          </div>
         </div>
       </Container>
     </footer>
   )
 }
+
 import About from './About.jsx'
 import Showcase from './Showcase.jsx'
 import StackedCards from './StackedCards.jsx'
 import Testimonials from './Testimonials.jsx'
 
-import Testimonials from './components/Testimonials';
 export default function App() {
   return (
     <main>
       <Hero />
-<<<<<<< HEAD
       <Showcase />
       <StackedCards />
       <About />
       <Testimonials />
-=======
-      <Testimonials />
-      <Highlights />
-      <Tracks />
-      <Schedule />
->>>>>>> 5338b65 (furs)
       <CTA />
       <Footer />
       
