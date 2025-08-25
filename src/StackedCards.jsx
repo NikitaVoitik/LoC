@@ -8,7 +8,7 @@ const items = [
     title: "Enjoyable and Interactive Learning",
     text: "Our unique one-on-one teaching style with our awesome instructors and platform provide your child with the best chance of successful learning.",
     color: "#FADDE1",
-    img: "/public/pexels-julia-m-cameron-4143800.jpg"
+    img: "/pexels-julia-m-cameron-4143800.jpg"
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const items = [
     title: "Customised Learning Path",
     text: "No matter the case, if the goals are set up by you (the parent) or the child, we take care of all the assessments and planning to help you achieve them.",
     color: "#F6E7C1",
-    img: "/public/pexels-julia-m-cameron-4145074.jpg"
+    img: "/pexels-julia-m-cameron-4145074.jpg"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const items = [
     title: "You're in control of your child’s progress",
     text: "We help you track your kids progress so that you can feel confident that your child is getting the best education possible.",
     color: "#E3F2FD",
-    img: "/public/pexels-julia-m-cameron-4145354.jpg"
+    img: "/pexels-julia-m-cameron-4145354.jpg"
   }
 ];
 

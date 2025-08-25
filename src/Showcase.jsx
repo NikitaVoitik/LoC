@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const cards = [
-  { id: 1, title: "Game Dev", img: "/public/gamedev.jpg", color: "#E0F2FE" },
-  { id: 2, title: "Algorithms", img: "/public/algo.jpg", color: "#FDE68A" },
-  { id: 3, title: "Math",  img: "/public/math.jpg",   color: "#FBCFE8" },
+  { id: 1, title: "Game Dev", img: "/gamedev.jpg", color: "#E0F2FE" },
+  { id: 2, title: "Algorithms", img: "/algo.jpg", color: "#FDE68A" },
+  { id: 3, title: "Math",  img: "/math.jpg",   color: "#FBCFE8" },
 ];
 
 const containerStagger = {

@@ -14,7 +14,7 @@ function Hero() {
         loop
         playsInline
       >
-        <source src="/public/0822.mov" type="video/mp4" />
+        <source src="/0822.mov" type="video/mp4" />
         Ваш браузер не підтримує відео.
       </video>
 
